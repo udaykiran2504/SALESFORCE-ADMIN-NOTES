@@ -6,7 +6,7 @@ support and related interactions with customer and business partners
 CRM= customer Relationship management 
 types of crm 
 1. on premises crm
-2.cloud based crm
+2.cloud based crm 
 
 role of an administrator 
 
