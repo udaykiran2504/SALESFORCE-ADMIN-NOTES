@@ -12,7 +12,7 @@ role of an administrator
 
 user support
 user management ( access control, managing the user in the org, permissions, license )
-data management 
+data management
 creating reports
 building dashboards
 business process autonation-decletative ( drag and drop)
@@ -28,7 +28,7 @@ salesforce editions
 WORKING WITH APPS
 
 there are different types of apps in salesforce 
-1.standard apps ( sales , service, marketing )
+1.standard apps (sales , service, marketing )
 2.app exchange apps ( app installed from market place which can be free or paid)
 3. force.com platform( developers develop the app using apex language or declarative tools, visual force)
 force.com is a PaaS which allow developers to develop the apps, they are hosted on sales force platform which are ready to integrate
