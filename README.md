@@ -18,7 +18,6 @@ building dashboards
 business process autonation-decletative ( drag and drop)
 
 salesforce editions
-
 1.essential ( basic for small business)
 2.professional
 3.enterprise(full fledge version with no limitation )
