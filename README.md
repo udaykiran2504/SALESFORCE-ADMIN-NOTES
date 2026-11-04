@@ -378,3 +378,6 @@ Add a Global Action to the Global Actions Menu
 • Click the Mobile & Lightning Actions category in the palette.
 • Drag New Campaign from the palette into the Salesforce Mobile and Lightning Experience Actions section
 • Save the layout.
+
+
+uk
