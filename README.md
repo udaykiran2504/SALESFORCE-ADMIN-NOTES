@@ -380,4 +380,58 @@ Add a Global Action to the Global Actions Menu
 • Save the layout.
 
 
-uk
+Salesforce In-App Guidance: Prompts Study Notes
+
+Prompts are customizable, interactive windows used for in-app guidance to onboard users, highlight feature updates, or provide contextual help directly inside Salesforce. They come in various formats, such as floating, docked, or targeted prompts, allowing you to guide users to specific elements on a page.
+
+🛠️ Step-by-Step Process to Create a Prompt
+
+
+Step 1: Open the In-App Guidance Builder
+
+1. Click the Setup (Gear Icon) and select Setup.
+2. In the Quick Find box, type In-App Guidance and select it.
+3. Click the Add button. This action automatically opens the In-App Guidance Builder in a new browser tab.
+4. Use the internal App Launcher within the builder to navigate to the specific application where you want the prompt to live (e.g., Sales Console).
+5. Click Add in the builder bar at the top of the page to open the configuration panel.
+
+Step 2: Choose Prompt Type and Position
+
+1. Select Single Prompt and click Next.
+2. Select Targeted Prompt (or choose Floating/Docked depending on your goal) as the Prompt Type.
+3. Scroll down to Prompt Position and click Targeting Mode.
+4. Click directly on the screen element or icon you want to highlight (e.g., the Salesforce Help icon in the global header).
+5. (Optional) Configure a custom theme color (Light or Dark) if desired, then click Next.
+
+Step 3: Add Content and Text
+
+1. Enter a clear Title for your prompt window.
+2. Write the Body text providing instructions to the user.
+3. Provide a Dismiss Button Label (e.g., "Got It").
+4. Click Save.
+
+Step 4: Configure Settings (Action, Schedule, & Restrictions)
+
+1. Action Button: Enter an Action Button Label (e.g., "Tell Me More") and paste a destination Action Button URL for further reading. Click Next.
+2. Schedule: Define an End Date (e.g., 3 months from today). Specify the frequency by filling in Times to Show and Days In Between. Click Next.
+3. Profile & Permission Restrictions: Leave as default (No restrictions) or apply specific criteria if you only want a targeted audience to see it. Click Next.
+
+Step 5: Name and Save your Work
+
+1. Enter an internal Name and Description so other admins understand the prompt's purpose.
+2. Accept the default API Name.
+3. Click Save, then click Done in the header.
+
+🖼️ Critical Requirement: Adding Images
+
+If you plan to link to an external image inside a prompt, your org must trust the source domain first.
+• Navigate to Setup ➡️ Trusted URLs.
+• Click New Trusted URL.
+• Enter the API Name and URL (e.g., help.salesforce.com).
+• Ensure the img-src (images) CSP Directive checkbox is turned On before saving.
+
+📊 Tracking User Success
+
+You can track how well your prompts perform using two native metrics found on the In-App Guidance setup page:
+• Views: The total number of unique users who have seen the prompt.
+• Completes: The percentage of users who actively interacted with your prompt by clicking the Action Button or finishing the steps.
