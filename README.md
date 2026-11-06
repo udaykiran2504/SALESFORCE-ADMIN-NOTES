@@ -1,6 +1,5 @@
 
 what is salesforce CRM?
-
 sales force is a cloud based CRM platform which has a the  tools, technologies, and procedures to manage , improve or facilitate sales 
 support and related interactions with customer and business partners 
 CRM= customer Relationship management 
