@@ -50,11 +50,6 @@ to create a lignting  app
 
 
 
-
-
-
-
-
 objects = tables 
 columns are fields 
 rows are records 
