@@ -48,8 +48,6 @@ to create a lignting  app
 2.import the required objects > assign access> save and finish
 
 
-
-
 objects = tables 
 columns are fields 
 rows are records 
