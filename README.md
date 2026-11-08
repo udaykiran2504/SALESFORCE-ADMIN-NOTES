@@ -152,7 +152,6 @@ Use this if the child cannot exist without the parent (e.g., if you delete the p
 7. Click Next to confirm security and page layout choices.
 8. Click Save.
 
-
 IMPORTING THE DATA 
 there are two types of methods to inmport the data in salesforce 
 1.data import wizard
