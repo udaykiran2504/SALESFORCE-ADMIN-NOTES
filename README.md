@@ -47,7 +47,6 @@ to create a lignting  app
 1.go to setup> app manager> create new app > create the app name , logo etc 
 2.import the required objects > assign access> save and finish
 
-
 objects = tables 
 columns are fields 
 rows are records 
