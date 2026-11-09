@@ -1,22 +1,22 @@
-
 what is salesforce CRM?
-
 sales force is a cloud based CRM platform which has a the  tools, technologies, and procedures to manage , improve or facilitate sales 
 support and related interactions with customer and business partners 
 CRM= customer Relationship management 
 types of crm 
 1. on premises crm
-2.cloud based crm 
+2.cloud based crm
+
 role of an administrator 
 
 user support
 user management ( access control, managing the user in the org, permissions, license )
-data management
+data management 
 creating reports
 building dashboards
 business process autonation-decletative ( drag and drop)
 
 salesforce editions
+
 1.essential ( basic for small business)
 2.professional
 3.enterprise(full fledge version with no limitation )
@@ -26,7 +26,7 @@ salesforce editions
 WORKING WITH APPS
 
 there are different types of apps in salesforce 
-1.standard apps (sales , service, marketing )
+1.standard apps ( sales , service, marketing )
 2.app exchange apps ( app installed from market place which can be free or paid)
 3. force.com platform( developers develop the app using apex language or declarative tools, visual force)
 force.com is a PaaS which allow developers to develop the apps, they are hosted on sales force platform which are ready to integrate
@@ -46,6 +46,15 @@ controll conponents: logic, functions like save, convert, autoresponse , dataval
 to create a lignting  app
 1.go to setup> app manager> create new app > create the app name , logo etc 
 2.import the required objects > assign access> save and finish
+
+if you want to add objects to the app 
+first you need to convert the obj into tabs and then add that to the app
+
+difference between app manager and lightning app builder 
+
+1.Use App Manager to create the app and add your custom object tabs to its navigation bar.
+
+2.Use Lightning App Builder if you want to customize the specific record layout screen for those objects.
 
 objects = tables 
 columns are fields 
@@ -151,6 +160,7 @@ Use this if the child cannot exist without the parent (e.g., if you delete the p
 6. Give your field a name. You can also check the Allow Reparenting box if you want users to be able to switch parents later. Click Next.
 7. Click Next to confirm security and page layout choices.
 8. Click Save.
+
 
 IMPORTING THE DATA 
 there are two types of methods to inmport the data in salesforce 
@@ -341,6 +351,7 @@ Just like Dynamic Forms, creating a button or action does not make it appear aut
 	• Search for your custom button or action name, select it, and click Done.
 	• Click Save at the top right of the screen.
 
+
 1. Create an Object-Specific Action
 
 Use this when the action belongs to a single object and needs to pull data from the record you are looking at.
@@ -362,67 +373,133 @@ Use this when you want a button that can be clicked from anywhere in Salesforce 
 
 Add a Global Action to the Global Actions Menu
 
-• From Setup, click the Home tab.
-• Enter PublisherCopy in the Quick Find box and click Publisher Layouts.
-• Click Edit next to Global Layout.
-• If the “Salesforce Mobile and Lightning Experience Actions” section isn’t customized, click override global publisher layout to override it.
-• Click the Mobile & Lightning Actions category in the palette.
-• Drag New Campaign from the palette into the Salesforce Mobile and Lightning Experience Actions section
-• Save the layout.
+From Setup, click the Home tab.
+Enter PublisherCopy in the Quick Find box and click Publisher Layouts.
+Click Edit next to Global Layout.
+If the “Salesforce Mobile and Lightning Experience Actions” section isn’t customized, click override global publisher layout to override it.
+Click the Mobile & Lightning Actions category in the palette.
+Drag New Campaign from the palette into the Salesforce Mobile and Lightning Experience Actions section
+Save the layout.
 
 
-Salesforce In-App Guidance: Prompts Study Notes
 
-Prompts are customizable, interactive windows used for in-app guidance to onboard users, highlight feature updates, or provide contextual help directly inside Salesforce. They come in various formats, such as floating, docked, or targeted prompts, allowing you to guide users to specific elements on a page.
+USER ENGAGEMENT 
 
-🛠️ Step-by-Step Process to Create a Prompt
+there are 4 scenarios in user engagement 
+
+1.onboarding :
+Show users where to begin and what’s new or changed. Get them to the “aha moment” quickly.
+examples :
+First time in trial or new feature area
+Setting up a new feature
+First time in a new release
+
+2.feature discovery and adoption :Help beginners become experts. Help experienced users learn new things. Raise awareness of new features and releases.
+example:New feature enabled
+Encourage best practices
+
+3.Troubleshooting help:
+Provide just-in-time prompts that help users learn by doing. Offer reliable resources and access to support
+
+example :
+Provide just-in-time prompts that help users learn by doing. Offer reliable resources and access to support
+
+Deeper learning:
+
+Give users the skills and information they need to get as much value as possible out of your product or application.
+example:
+User wants a deeper understanding of a new feature
 
 
-Step 1: Open the In-App Guidance Builder
+Components and Patterns
 
-1. Click the Setup (Gear Icon) and select Setup.
-2. In the Quick Find box, type In-App Guidance and select it.
-3. Click the Add button. This action automatically opens the In-App Guidance Builder in a new browser tab.
-4. Use the internal App Launcher within the builder to navigate to the specific application where you want the prompt to live (e.g., Sales Console).
-5. Click Add in the builder bar at the top of the page to open the configuration panel.
+1.Welcome Mat:Programmatic
 
-Step 2: Choose Prompt Type and Position
+Provide getting started resources the first time that users log in to Lightning Experience.
 
-1. Select Single Prompt and click Next.
-2. Select Targeted Prompt (or choose Floating/Docked depending on your goal) as the Prompt Type.
-3. Scroll down to Prompt Position and click Targeting Mode.
-4. Click directly on the screen element or icon you want to highlight (e.g., the Salesforce Help icon in the global header).
-5. (Optional) Configure a custom theme color (Light or Dark) if desired, then click Next.
+2.Guidance Center:Declarative
 
-Step 3: Add Content and Text
+The Trailhead icon in the header opens a menu of contextual help topics, Trailhead modules, and more items.
 
-1. Enter a clear Title for your prompt window.
-2. Write the Body text providing instructions to the user.
-3. Provide a Dismiss Button Label (e.g., "Got It").
-4. Click Save.
+3.Prompts Declarative
 
-Step 4: Configure Settings (Action, Schedule, & Restrictions)
+Use a floating, targeted, or docked prompt to let users know about new features, news, important announcements, or helpful guidance for the page they're working on.
 
-1. Action Button: Enter an Action Button Label (e.g., "Tell Me More") and paste a destination Action Button URL for further reading. Click Next.
-2. Schedule: Define an End Date (e.g., 3 months from today). Specify the frequency by filling in Times to Show and Days In Between. Click Next.
-3. Profile & Permission Restrictions: Leave as default (No restrictions) or apply specific criteria if you only want a targeted audience to see it. Click Next.
+4.Popovers Programmatic
 
-Step 5: Name and Save your Work
+Use a feature popover to point to a lower-level component on the page to provide tips and best practices.
 
-1. Enter an internal Name and Description so other admins understand the prompt's purpose.
-2. Accept the default API Name.
-3. Click Save, then click Done in the header.
+5.Empty State Programmatic
 
-🖼️ Critical Requirement: Adding Images
+Replace a blank section with instructions on next steps.
 
-If you plan to link to an external image inside a prompt, your org must trust the source domain first.
-• Navigate to Setup ➡️ Trusted URLs.
-• Click New Trusted URL.
-• Enter the API Name and URL (e.g., help.salesforce.com).
-• Ensure the img-src (images) CSP Directive checkbox is turned On before saving.
+6.Field-level Help Declarative
 
-📊 Tracking User Success
+Detail the purpose and function of a standard or custom field.
 
-You can track how well your prompts perform using two native metrics found on the In-App Guidance setup page:
-• Views: The total number of unique users who have seen the prompt.
-• Completes: The percentage of users who actively interacted with your prompt by clicking the Action Button or finishing the steps.
+7.Setup Assistant Programmatic
+
+Centralized list of tasks designed to help users onboard organizations, clouds, or features.
+
+8.Walkthrough Declarative
+
+Hands-on interactive tour, guiding users through a series of onboarding steps.
+
+PUSH AND PULL METHOD 
+
+Push Method:
+ The system automatically brings help to the user, even if they didn't ask for it. This is great when users might miss a useful feature or need guidance right away (for example, a welcome message or a prompt when you open a page).
+
+Pull Method:
+ The user actively seeks out help when they want it. This happens when a user is motivated to learn more and triggers the help themselves (for example, hovering over an info icon to read a tooltip).
+
+Prompt vs. Walkthrough
+Prompt: A single, small window for a quick message, update, or call to action.
+
+Walkthrough: A series of connected prompts guiding users step-by-step across pages (ideal for onboarding new hires or multi-step procedures).
+
+1. When to Use Prompts & Walkthroughs (Suitable Use Cases)
+Best for short, helpful messages or calling attention to new/important features without interrupting work.
+
+Good for: Easy-to-learn features, features without setup requirements, requested enhancements, onboarding low-adoption features, and productivity tips.
+
+Avoid for: Complex workflows, steep learning curves, or heavily personalized features.
+
+. Three Flavors of Prompts
+Floating Prompt: Short, nonintrusive message with an optional image and CTA button; can be placed in one of nine positions on a page.
+
+Targeted Prompt: Shares benefits of floating prompts but is attached directly to a specific page element.
+
+Docked Prompt: Stays in place as users navigate; ideal for longer content, rich text, lists, or embedded videos that users can consult while working.
+
+CREATING PROMPTS 
+1. Setup & Packages
+Playground Setup: Install prebuilt packages (Sales and Service app packages) using their Package IDs in your Trailhead Playground via Playground Starter.
+
+View Prompts: Go to Setup > In-App Guidance to see, preview, or manage all installed prompts.
+
+2. Creating a Targeted Prompt
+Location: Open In-App Guidance, click Add, navigate to the target app (e.g., Sales Console), and click Add in the builder bar.
+
+Configuration: Choose Targeted Prompt, pick a targeting element (like the Help icon), and configure your Title, Body, and Buttons.
+
+Settings: Set a schedule, display frequency, and unique Name/API Name, then save and click Done.
+
+3. Trusted URLs for Images
+If your prompt links to an external image, you must add its domain to Trusted URLs in Setup.
+
+Ensure img-src (images) is enabled under CSP Directives.
+
+4. Tracking User Engagement
+Key Metrics:
+
+Views: Total unique users who saw the prompt/walkthrough.
+
+Completes: Percentage of viewers who clicked the action button/link or finished the final step.
+
+Reports: Use the Prompt Actions object or prebuilt Salesforce Labs packages to analyze engagement trends, drop-offs, and fine-tune your settings.
+
+
+
+
+
