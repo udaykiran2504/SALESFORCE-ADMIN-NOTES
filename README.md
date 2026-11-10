@@ -798,6 +798,220 @@ Click Save.
 
 
 
+# Salesforce – Overview of Data Security
+
+## 1. Overview of Data Security
+
+What is it?
+
+Data Security in Salesforce means protecting an organization's data by controlling who can access, view, edit, or delete information.
+
+How is it used in real life?
+
+For example, in a company:
+
+- HR can access employee details.
+- Salespeople can access customer details.
+- Managers can view their team's records.
+- Employees cannot access sensitive information without permission.
+
+How do we create it?
+
+Salesforce provides different security settings:
+
+- Org-level security
+- Object-level security
+- Field-level security
+- Record-level security
+
+These settings work together to protect data.
+
+## 2. Control Access to the Org (Organization-Level Security)
+
+What is it?
+
+It controls who can log in to Salesforce and from where they can access it.
+
+How is it used in real life?
+
+A company may allow employees to log in only during working hours or from trusted locations.
+
+How do we create it?
+
+1. Go to Setup.
+2. Search for Session Settings to manage session security.
+3. Search for Network Access to specify trusted IP ranges.
+4. Search for Login Hours in Profiles to restrict login times.
+5. Use Login IP Ranges in Profiles to restrict access by IP address.
+
+## 3. Control Access to Objects (Object-Level Security)
+
+What is it?
+
+An Object is like a table that stores a particular type of data, such as Accounts, Contacts, or Leads.
+
+Object-level security controls what a user can do with an object.
+
+How is it used in real life?
+
+For example:
+
+- Sales users can create and edit Leads.
+- HR users can access Employee records.
+- Some users may only view Accounts but cannot edit or delete them.
+
+How do we create it?
+
+1. Go to Setup.
+2. Search for Profiles or Permission Sets.
+3. Open the required Profile or Permission Set.
+4. Find Object Settings.
+5. Select an object (Account, Contact, etc.).
+6. Enable the required permissions:
+   - Read – View records.
+   - Create – Create records.
+   - Edit – Modify records.
+   - Delete – Delete records.
+
+## 4. Control Access to Fields (Field-Level Security)
+
+What is it?
+
+Field-Level Security (FLS) controls which fields a user can view or edit inside an object.
+
+How is it used in real life?
+
+For example, in an Employee object:
+
+- HR can view Salary and Personal Details.
+- Managers can view employee names and departments.
+- Regular employees cannot view salary details.
+
+How do we create it?
+
+1. Go to Setup.
+2. Search for Object Manager.
+3. Select the required object.
+4. Open Fields & Relationships.
+5. Select the required field.
+6. Click Set Field-Level Security.
+7. Choose which Profiles can view or edit the field.
+
+## 5. Control Access to Records (Record-Level Security)
+
+What is it?
+
+Record-level security controls which individual records a user can access within an object.
+
+How is it used in real life?
+
+For example:
+
+- John can see only his assigned customers.
+- Priya can see only her assigned customers.
+- A manager can see records belonging to their team.
+
+How do we create it?
+
+Salesforce provides different ways to control record access:
+
+1. Organization-Wide Defaults (OWD): Set the default record access for users.
+2. Role Hierarchy: Give managers access to records owned by users below them.
+3. Sharing Rules: Share records with specific groups or roles.
+4. Manual Sharing: Allow users to share individual records manually.
+5. Teams: Share records with specific team members (where supported).
+
+## 6. Create a Role Hierarchy
+
+What is it?
+
+Role Hierarchy is a structure that defines the reporting levels in an organization.
+
+Users higher in the hierarchy can generally access records owned by users below them, depending on sharing settings.
+
+How is it used in real life?
+
+For example:
+
+Sales Director
+
+Sales Manager
+
+Sales Rep 1
+
+Sales Rep 2
+
+- Sales Reps can access their own records.
+- Sales Managers can access records owned by their team.
+- Sales Directors can access records owned by users below them.
+
+How do we create it?
+
+1. Go to Setup.
+2. Search for Roles.
+3. Click Set Up Roles.
+4. Click Add Role.
+5. Enter the Role Name.
+6. Select the role above it in the hierarchy.
+7. Click Save.
+
+## 7. Define Sharing Rules
+
+What is it?
+
+Sharing Rules are used to give additional record access to users who normally cannot access those records.
+
+They extend access; they do not restrict existing access.
+
+How is it used in real life?
+
+For example:
+
+A company has two sales teams:
+
+- Team A handles customers in India.
+- Team B handles customers in the USA.
+
+If Team A needs to access some records owned by Team B, a sharing rule can provide that access.
+
+How do we create it?
+
+1. Go to Setup.
+2. Search for Sharing Settings.
+3. Find the required object.
+4. Go to Sharing Rules.
+5. Click New.
+6. Select the rule type:
+   - Owner-Based: Share records based on who owns them.
+   - Criteria-Based: Share records based on specific conditions.
+7. Select the users or groups who will receive access.
+8. Choose the access level:
+   - Read Only
+   - Read/Write
+9. Click Save.
+
+## Quick Revision – Remember the Difference
+
+| Security Type | Controls |
+| --- | --- |
+| Org-Level | Who can log in? |
+| Object-Level | Which objects can users access? |
+| Field-Level | Which fields can users view or edit? |
+| Record-Level | Which individual records can users access? |
+| Role Hierarchy | How does access flow from managers to team members? |
+| Sharing Rules | How can we share records with additional users? |
+
+Easy way to remember:
+
+- Org = Entry into Salesforce.
+- Object = Access to a table.
+- Field = Access to a column.
+- Record = Access to a row.
+- Role Hierarchy = Manager-to-employee access.
+- Sharing Rules = Extra access to records.
+
+
+
 
 
 
