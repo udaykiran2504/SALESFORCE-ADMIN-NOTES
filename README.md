@@ -622,6 +622,181 @@ Click Save and Run Report.
 
 Save the report to enforce the locked filter for all viewers.
 
+What is a Dashboard in Salesforce?
+A dashboard is a visual display of multiple Salesforce reports side-by-side using widgets (such as charts, tables, metrics, and gauges). While a report gives you structured data in rows and columns, a dashboard summarizes that data graphically for quick decision-making.
+
+Key Dashboard Concepts
+Dashboard Builder: An intuitive tool to create, resize, and arrange widgets using a responsive grid layout.
+
+Widget Types:
+
+Charts (Bar, Line, Donut, Funnel, etc.) for graphical data.
+
+Gauges to track a single value within a custom range.
+
+Metrics to display a single key value.
+
+Tables to show report data in column form.
+
+Dynamic Dashboards: Allow users to see only the data they have permission to view based on their security and sharing settings, drastically reducing the number of duplicate dashboards required for different roles.
+
+Step-by-Step Process
+Step 1: Create the Source Report
+Before building a dashboard, you need a source report:
+
+Go to the Reports tab, click New Report, choose Leads as the report type, and click Start Report.
+
+Go to Filters:
+
+Set Show Me to All Leads and click Apply.
+
+Set Date Field to Create Date with a range of All Time, then click Apply.
+
+Go to Outline and group rows by Lead Source.
+
+Ensure your report includes these columns: Lead Owner, First Name, Last Name, Title, Company/Account, Rating, Street, Email.
+
+Click Save, name it Leads by Lead Source, and click Save & Run.
+
+Step 2: Create the Dashboard
+Go to the Dashboards tab (or via App Launcher / Analytics tab) and click New Dashboard.
+
+Name your dashboard Leads Dashboard and click Create.
+
+Click + Widget, choose Chart or Table, and select your Leads by Lead Source report.
+
+Select a Donut Chart as the display widget type.
+
+Click Add, position or resize the widget as needed, and click Save, then Done.
+
+Step 3: Set Up a Dynamic Dashboard (Optional)
+To let users view data according to their individual security permissions:
+
+Create and share separate folders for your reports and dashboards with your team.
+
+Open your dashboard in the Dashboard Builder and click the properties (gear) icon.
+
+Under View Dashboard As, select The dashboard viewer.
+
+Check Let dashboard viewers choose whom they view the dashboard as if applicable.
+
+Click Save on the properties window, then click Save in the Dashboard Builder.
+
+Step 4: Add a Chart Directly to a Report (Alternative to Dashboards)
+If you just want a single chart at the top of your report instead of a full dashboard:
+
+Open your saved report (e.g., Leads by Lead Source) from the Reports tab.
+
+If a chart doesn't appear automatically at the top, click the Add Chart button.
+
+Save the report to keep the chart visible.
+
+
+1. Use Formula Fields
+Formula fields are read-only fields whose values are automatically calculated dynamically based on a formula expression you write using other fields, math functions, or logic.
+
+What it does: Performs calculations or text operations on the fly whenever a record is viewed or saved. (For example, calculating total price by multiplying quantity by unit price, or calculating a customer's age from their birthdate).
+
+Key Concept: Because they are calculated in real-time, you cannot manually edit a formula field's value on a record detail page.
+
+2. Implement Roll-Up Summary Fields
+Roll-up summary fields calculate values from a related child record and display the result on the parent record.
+
+What it does: Automatically aggregates data across multiple child records associated with a single parent.
+
+Supported Operations:
+
+COUNT: Counts the total number of related child records.
+
+SUM: Adds up a numeric field across all child records (e.g., total value of all open opportunities on an Account).
+
+MIN / MAX: Finds the lowest or highest value among the child records (e.g., the date of the most recent activity).
+
+Key Requirement: Can only be created on the parent side of a Master-Detail relationship.
+
+3. Create Validation Rules
+Validation rules verify that data entered by a user meets specific business standards before the record can be saved to the database.
+
+What it does: Prevents "bad data" from entering your system by checking data conditions. If the rule evaluates to TRUE (meaning the data is invalid), Salesforce blocks the save, stops the user, and displays a customized error message.
+
+How it works: Uses logical formulas (like checking if an end date is earlier than a start date, or ensuring a discount percentage is not greater than 100%).
+
+
+1. How to Create a Formula Field
+Formula fields automatically calculate values on the fly using math, logic, or text from other fields.
+
+Step-by-Step Process:
+Go to Setup and click on the Object Manager tab.
+
+Select the object where you want to add the formula (e.g., Opportunity or Contact).
+
+In the left-hand sidebar, click Fields & Relationships, then click New.
+
+Choose Formula as the data type and click Next.
+
+Give your field a Field Label (e.g., Total Price) and select the Formula Return Type (e.g., Currency, Number, Text, or Checkbox). Click Next.
+
+In the formula editor:
+
+Use the Insert Field and Insert Operator buttons, or write your formula directly (e.g., Quantity * UnitPrice).
+
+Click Check Syntax to ensure your formula has no errors.
+
+Set your Field-Level Security (who can see the field) and click Next, then Save.
+
+2. How to Create a Roll-Up Summary Field
+Roll-up summary fields calculate values from a child record and display the total or count on the parent record (requires a Master-Detail relationship).
+
+Step-by-Step Process:
+Go to Setup > Object Manager and select the Parent Object (e.g., Account).
+
+Click Fields & Relationships, then click New.
+
+Choose Roll-Up Summary as the data type and click Next. (Note: If this option is grayed out, ensure your object is the parent in a Master-Detail relationship).
+
+Enter a Field Label (e.g., Total Opportunities Value) and click Next.
+
+Configure the roll-up settings:
+
+Summarized Object: Select the child object (e.g., Opportunities).
+
+Roll-Up Type: Choose what you want to calculate:
+
+Count: Total number of child records.
+
+Sum: Adds up values in a specific numeric field.
+
+Min / Max: Finds the lowest or highest value.
+
+Field to Aggregate: Select the specific numeric field to sum up (e.g., Amount).
+
+Filter Criteria: Choose whether to include all records or only records matching certain criteria (e.g., only closed-won opportunities).
+
+Click Next, set your field-level security, and click Save.
+
+3. How to Create a Validation Rule
+Validation rules check if user-entered data meets your business standards before allowing them to save the record. If the rule evaluates to TRUE, Salesforce blocks the save and shows an error.
+
+Step-by-Step Process:
+Go to Setup > Object Manager and select the object you want to protect (e.g., Account or Lead).
+
+In the left sidebar, click Validation Rules, then click New.
+
+Give your rule a Rule Name and check the Active box.
+
+In the Error Condition Formula box, write a formula that defines when invalid data is present (e.g., if a discount should not be greater than 100%, write: Discount_Percentage__c > 100).
+
+Click Check Syntax to verify the formula.
+
+In the Error Message section:
+
+Type the message you want the user to see when they trigger the error (e.g., Discount percentage cannot exceed 100%!).
+
+Choose where the error location should appear (Top of Page or tied to a specific Field).
+
+Click Save.
+
+
 
 
 
