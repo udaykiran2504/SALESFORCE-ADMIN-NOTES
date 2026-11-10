@@ -573,6 +573,53 @@ Select or create your field filter (e.g., Lead Source contains Partner).
 
 Check the Locked checkbox in the filter configuration window and click Apply.
 
+What is Report Formatting in Salesforce?
+Report formatting defines how your data is structured, grouped, and displayed. Salesforce provides three main report formats to suit different business needs:
+
+Tabular: The simplest format (like a standard spreadsheet). It lists records in simple rows and columns. Best for straightforward lists (e.g., mailing lists).
+
+Summary: Allows you to group rows of data, view subtotals, and create charts. It is the most commonly used "workhorse" format for tracking and dashboards.
+
+Matrix: Allows you to group records both by row and by column. Best for getting a quick, high-level overview of totals (e.g., tracking monthly revenue trends across different opportunity types).
+
+How to Create and Format Reports
+1. Creating a Tabular Report
+Go to the Reports tab and click New Report.
+
+Choose the Opportunities report type and click Start Report.
+
+Apply standard filters (e.g., set Show Me to All opportunities, status to Open, and date range to All Time).
+
+Click Save, name your report (e.g., Open Opportunities This Year), save it in the Public Reports folder, and click Run.
+
+2. Creating a Summary Report (Grouping Rows)
+Open or create a report (e.g., Cases report).
+
+Set up your filters and columns.
+
+Click the Outline tab on the left panel.
+
+Under GROUP ROWS, choose a field to group by (e.g., Priority).
+
+(Optional) Turn off Detail Rows at the bottom of the preview page if you only want to see the subtotals and totals for each group.
+
+Click Save and Run.
+
+3. Creating a Matrix Report (Grouping Rows & Columns)
+Open or create a report (e.g., Opportunities report) and apply your standard filters.
+
+Summarize a numeric column if needed: Click the dropdown arrow on the Amount column, select Summarize, and choose Sum.
+
+Click the Outline tab:
+
+Under GROUP ROWS, select a row grouping (e.g., Close Month).
+
+Under GROUP COLUMNS, select a column grouping (e.g., Type).
+
+(Optional) Turn off Detail Rows to keep matrix reports clean and easy to read at a glance.
+
+Click Save and Run Report.
+
 Save the report to enforce the locked filter for all viewers.
 
 
