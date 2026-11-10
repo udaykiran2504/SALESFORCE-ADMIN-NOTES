@@ -1,0 +1,1953 @@
+# SALESFORCE CRM – COMPLETE STUDY NOTES
+
+## Curriculum / Learning Roadmap
+
+| Module | Topics |
+|---|---|
+| 1 | Introduction to Salesforce CRM |
+| 2 | Salesforce Editions and Applications |
+| 3 | Salesforce Architecture and MVC |
+| 4 | Objects, Fields and Records |
+| 5 | Creating Custom Objects and Records |
+| 6 | Data Types and Relationships |
+| 7 | Data Import and Export |
+| 8 | Salesforce UI Customization |
+| 9 | Buttons, Links and Actions |
+| 10 | Formula Fields, Roll-Up Summary and Validation Rules |
+| 11 | Reports, Filters and Dashboards |
+| 12 | Data Security and User Access |
+| 13 | User Engagement and In-App Guidance |
+
+---
+
+# MODULE 1: INTRODUCTION TO SALESFORCE CRM
+
+## 1. What is Salesforce?
+
+Salesforce is a cloud-based CRM platform used by businesses to manage their customer relationships, sales, marketing and customer support activities.
+
+**CRM = Customer Relationship Management**
+
+### Simple Example
+
+Imagine a mobile phone company.
+
+It has thousands of customers. The company needs to maintain information such as:
+
+- Customer name
+- Phone number
+- Email address
+- Purchase history
+- Complaints
+- Payment details
+
+Salesforce helps the company store and manage all this information in one centralized platform.
+
+### What is CRM used for?
+
+1. Managing customer information.
+2. Tracking sales activities.
+3. Managing customer support.
+4. Maintaining customer communication.
+5. Improving customer relationships.
+
+## 2. Types of CRM
+
+There are two main types covered in this material.
+
+**1. On-Premises CRM**
+
+- CRM software is installed on the company's own servers.
+- The company manages its own infrastructure.
+- The company is responsible for maintenance.
+
+**2. Cloud-Based CRM**
+
+- CRM software is hosted on cloud servers.
+- Users can access it through the internet.
+- Infrastructure is managed by the service provider.
+
+Example: Salesforce.
+
+## 3. Role of a Salesforce Administrator
+
+A Salesforce Administrator manages and maintains the Salesforce organization (Org).
+
+Main responsibilities:
+
+| Responsibility | Explanation |
+|---|---|
+| User Support | Help users solve Salesforce-related problems. |
+| User Management | Create users and manage licenses and permissions. |
+| Access Control | Decide who can access different information. |
+| Data Management | Maintain and organize business data. |
+| Reports | Create reports to analyze business information. |
+| Dashboards | Display important information visually. |
+| Automation | Automate business processes using drag-and-drop tools. |
+
+**Remember:** A Salesforce Administrator mainly manages users, data, security, customization and business processes.
+
+---
+
+# MODULE 2: SALESFORCE EDITIONS AND APPLICATIONS
+
+## 1. Salesforce Editions
+
+Salesforce offers different editions based on business requirements.
+
+| Edition | Simple Explanation |
+|---|---|
+| Essentials | Basic features for small businesses. |
+| Professional | Features for growing businesses. |
+| Enterprise | Advanced features for larger organizations. |
+| Unlimited | Additional capabilities and expanded support. |
+| Developer | Used for development, learning and testing. |
+
+Note: Actual features and limits depend on the edition and current Salesforce licensing.
+
+## 2. What is a Salesforce App?
+
+An App is a collection of objects, tabs and other features grouped together for a particular business purpose.
+
+Example:
+
+A Sales App may contain:
+- Accounts
+- Contacts
+- Leads
+- Opportunities
+
+### Types of Salesforce Apps
+
+**1. Standard Apps**
+
+These are applications provided by Salesforce.
+
+Examples:
+- Sales
+- Service
+- Marketing
+
+**2. AppExchange Apps**
+
+AppExchange is Salesforce's marketplace.
+
+Users can install applications developed by other companies.
+
+These applications may be free or paid.
+
+**3. Custom Apps / Force.com Platform**
+
+Developers and administrators can create applications using Salesforce platform tools.
+
+Technologies include:
+- Apex
+- Visualforce
+- Declarative tools
+
+### What is PaaS?
+
+PaaS stands for Platform as a Service.
+
+It provides a platform where developers can build, test and deploy applications without managing the complete underlying infrastructure.
+
+---
+
+# MODULE 3: SALESFORCE ARCHITECTURE – MVC FRAMEWORK
+
+## 1. What is MVC?
+
+MVC stands for:
+
+- M – Model
+- V – View
+- C – Controller
+
+It is an architectural pattern used to organize an application into three main parts.
+
+### 1. Model
+
+The Model represents the data layer.
+
+It handles the information stored in the database.
+
+Examples:
+- Objects
+- Fields
+- Records
+
+### 2. View
+
+The View represents the user interface (UI).
+
+It is the part users see and interact with.
+
+Examples:
+- Pages
+- Tabs
+- Applications
+- UI components
+
+### 3. Controller
+
+The Controller handles application logic and user actions.
+
+Examples:
+- Save
+- Convert
+- Auto-response
+- Data validation
+
+### Easy Example
+
+Imagine you are filling out a customer registration form.
+
+1. View – Displays the registration form.
+2. Controller – Processes the information when you click Save.
+3. Model – Stores the customer information.
+
+**Remember:**
+
+- Model = Data
+- View = User Interface
+- Controller = Logic
+
+## 2. Components of Salesforce Architecture
+
+| Layer | Components |
+|---|---|
+| Model | Objects, Fields, Records |
+| View | Pages, Tabs, Apps |
+| Controller | Logic, Functions, Actions |
+
+## 3. Creating a Lightning App
+
+Steps:
+
+1. Open Salesforce.
+2. Click the Gear icon.
+3. Select Setup.
+4. Search for App Manager.
+5. Click New Lightning App.
+6. Enter the App Name.
+7. Select an app logo and other details.
+8. Add the required navigation items.
+9. Assign user access.
+10. Save and Finish.
+
+### Adding Objects to an App
+
+If you want to add a custom object to the navigation bar:
+
+1. Create the custom object.
+2. Create a tab for that object.
+3. Open App Manager.
+4. Edit the required app.
+5. Add the object tab to Navigation Items.
+6. Save.
+
+## 4. App Manager vs Lightning App Builder
+
+| App Manager | Lightning App Builder |
+|---|---|
+| Used to create and manage apps. | Used to customize Lightning pages. |
+| Manages navigation items. | Manages page components and layouts. |
+| Controls app configuration. | Controls the user interface of pages. |
+
+**Easy way to remember:**
+
+App Manager = Create the application.
+
+Lightning App Builder = Design the application pages.
+
+---
+
+# MODULE 4: OBJECTS, FIELDS AND RECORDS
+
+This is one of the most important Salesforce concepts.
+
+## 1. What is an Object?
+
+An Object is similar to a table in a database.
+
+It stores a particular type of information.
+
+Examples:
+- Account
+- Contact
+- Lead
+- Opportunity
+
+## 2. What is a Field?
+
+A Field is similar to a column in a database table.
+
+It stores a particular type of information.
+
+Examples:
+- Name
+- Email
+- Phone
+- Address
+
+## 3. What is a Record?
+
+A Record is similar to a row in a database table.
+
+It contains the actual information about a particular entry.
+
+### Example
+
+Consider a Student object.
+
+| Student Name | Age | Email |
+|---|---:|---|
+| Rahul | 22 | rahul@gmail.com |
+| Priya | 23 | priya@gmail.com |
+| Kiran | 24 | kiran@gmail.com |
+
+Here:
+
+- Student = Object
+- Student Name, Age, Email = Fields
+- Rahul's information = Record
+- Priya's information = Record
+
+### Important Terms
+
+| Salesforce Term | Database Meaning |
+|---|---|
+| Object | Table |
+| Field | Column |
+| Record | Row |
+| Field Label | Display name of a field |
+| Data Type | Type of information stored |
+
+---
+
+# MODULE 5: CREATING OBJECTS, FIELDS AND RECORDS
+
+## 1. Creating a Custom Object
+
+A Custom Object is an object created by users to store business-specific information.
+
+Example:
+
+A company wants to maintain information about energy audits. It can create a custom object called Energy Audit.
+
+### Steps
+
+1. Click the Gear icon.
+2. Open Setup.
+3. Click Object Manager.
+4. Click Create.
+5. Select Custom Object.
+6. Enter the following:
+   - Label
+   - Plural Label
+   - Object Name
+7. Select Launch New Custom Tab Wizard after saving.
+8. Keep other settings as required.
+9. Click Save.
+10. Select a tab style.
+11. Click Next and Save.
+
+## 2. Creating Custom Fields
+
+After creating an object, we can create fields inside it.
+
+### Steps
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select your custom object.
+4. Click Fields & Relationships.
+5. Click New.
+6. Select the required Data Type.
+7. Enter Field Label.
+8. Add a description if required.
+9. Select whether the field is mandatory.
+10. Click Next and Save.
+
+## 3. Creating a Custom Tab
+
+A Tab helps users access an object from the Salesforce navigation bar.
+
+### Steps
+
+1. Open Setup.
+2. Search for Tabs.
+3. Select New Custom Object Tab.
+4. Select your custom object.
+5. Choose a tab style.
+6. Save.
+
+## 4. Creating a Record
+
+### Steps
+
+1. Open App Launcher (9-dot icon).
+2. Select the required application.
+3. Search for your object in the navigation bar.
+4. Open the object.
+5. Click New.
+6. Enter the required information.
+7. Click Save.
+
+**Example:** Create a Student object, add Name, Age and Email fields, and then create student records.
+
+---
+
+# MODULE 6: DATA TYPES AND RELATIONSHIPS
+
+## PART A: SALESFORCE DATA TYPES
+
+Data Types define what kind of information a field can store.
+
+| Data Type | Meaning | Example |
+|---|---|---|
+| Text | Stores normal text. | Rahul |
+| Text Area | Stores multiple lines of text. | Address |
+| Number | Stores numeric values. | 100 |
+| Currency | Stores monetary values. | ₹50,000 |
+| Percent | Stores percentage values. | 75% |
+| Checkbox | Stores True or False. | Active / Inactive |
+| Date | Stores a date. | 10-11-2026 |
+| Date/Time | Stores date and time. | 10-11-2026 10:30 AM |
+| Email | Stores email addresses. | test@gmail.com |
+| Phone | Stores phone numbers. | 9876543210 |
+| URL | Stores website links. | www.google.com |
+| Picklist | Allows selection of one predefined value. | Male / Female |
+| Multi-Select Picklist | Allows multiple predefined values. | Java, Python |
+| Auto Number | Automatically generates sequential numbers. | AUD-001 |
+| Formula | Calculates values automatically. | Quantity × Price |
+| Roll-Up Summary | Summarizes related child records. | Total Amount |
+| Geolocation | Stores latitude and longitude. | Location coordinates |
+| Time | Stores time values. | 10:30 AM |
+
+### Important Data Types
+
+**1. Auto Number**
+
+Automatically generates a unique sequential number.
+
+Example:
+- STU-001
+- STU-002
+- STU-003
+
+**2. Formula**
+
+Automatically calculates a value based on other fields.
+
+Example:
+
+Total Price = Quantity × Unit Price.
+
+Users cannot manually edit the calculated value.
+
+**3. Roll-Up Summary**
+
+Calculates information from related child records and displays it on the parent record.
+
+Example:
+
+A customer has five orders. A Roll-Up Summary can calculate the total value of those orders.
+
+**4. Picklist**
+
+Allows users to select one value from a predefined list.
+
+Example:
+
+Status:
+- New
+- In Progress
+- Completed
+
+**5. Checkbox**
+
+Stores either True or False.
+
+Example:
+- Active = True
+- Inactive = False
+
+---
+
+## PART B: RELATIONSHIPS IN SALESFORCE
+
+Relationships connect one object with another object.
+
+Salesforce relationships help us connect related business information.
+
+There are three relationship types covered in these notes.
+
+### 1. Lookup Relationship
+
+A Lookup Relationship connects two objects, but both objects can generally exist independently.
+
+Example:
+
+A Student object is connected to a College object.
+
+If the College record is deleted, the Student record does not automatically have to be deleted.
+
+**Important points:**
+- The relationship field is generally optional.
+- Child records can exist independently.
+- Deleting the parent does not normally delete the child.
+- Does not support Roll-Up Summary fields directly.
+
+### 2. Master-Detail Relationship
+
+A Master-Detail Relationship creates a strong parent-child relationship.
+
+Example:
+
+College → Students.
+
+A student record depends on the college record.
+
+**Important points:**
+- The relationship field is required.
+- Child records depend on the parent.
+- Child record ownership and sharing are controlled by the parent.
+- Deleting the parent deletes its child records.
+- Supports Roll-Up Summary fields on the parent.
+
+### 3. External Lookup Relationship
+
+Connects a Salesforce object to external data stored outside the Salesforce organization.
+
+Example:
+
+A Salesforce record needs to connect to customer information stored in an external system.
+
+### Lookup vs Master-Detail
+
+| Feature | Lookup | Master-Detail |
+|---|---|---|
+| Relationship | Loose | Strong |
+| Parent required | Not always | Yes |
+| Child independent | Generally yes | No |
+| Ownership | Independent | Inherited from parent |
+| Parent deletion | Child generally remains | Child is deleted |
+| Roll-Up Summary | Not directly supported | Supported |
+
+### Easy Way to Remember
+
+Lookup = Independent relationship.
+
+Master-Detail = Dependent relationship.
+
+External Lookup = Connects to external data.
+
+## PART C: CREATING RELATIONSHIPS
+
+### Creating a Lookup Relationship
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the Child Object.
+4. Click Fields & Relationships.
+5. Click New.
+6. Select Lookup Relationship.
+7. Click Next.
+8. Select the Parent Object under Related To.
+9. Enter the Field Label.
+10. Click Next through the security and layout screens.
+11. Click Save.
+
+### Creating a Master-Detail Relationship
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the Child Object.
+4. Click Fields & Relationships.
+5. Click New.
+6. Select Master-Detail Relationship.
+7. Click Next.
+8. Select the Parent Object.
+9. Enter the Field Name.
+10. Select Allow Reparenting if required.
+11. Configure security and layout.
+12. Click Save.
+
+---
+
+# MODULE 7: DATA IMPORT AND EXPORT
+
+Data Import means bringing external data into Salesforce.
+
+Data Export means taking data out of Salesforce.
+
+## PART A: DATA IMPORT METHODS
+
+The following tools are covered in the training material.
+
+### 1. Data Import Wizard
+
+A built-in Salesforce tool used to import data.
+
+**Best for:**
+- Small data imports.
+- Everyday data updates.
+- Simple data uploads.
+
+**Key points:**
+- Works through the Salesforce browser interface.
+- Supports up to 50,000 records per import.
+- Supports selected standard objects and custom objects.
+
+### 2. Data Loader
+
+A standalone desktop application used to import and export large amounts of data.
+
+**Best for:**
+- Large data migrations.
+- Mass record updates.
+- Data backups.
+- Deleting records.
+- Exporting records.
+
+The notes mention support for up to 5 million records per file using the Bulk API.
+
+### 3. Dataloader.io
+
+A cloud-based data management tool from MuleSoft.
+
+**Best for:**
+- Automated data imports.
+- Scheduled imports.
+- Working through a browser.
+- Importing related records.
+
+The notes mention a free-tier limit of 10,000 records per month.
+
+### 4. Salesforce Workbench
+
+A web-based tool used by administrators and developers to interact with Salesforce APIs.
+
+**Best for:**
+- Testing API operations.
+- Running SOQL queries.
+- Importing and exporting data.
+- Performing advanced data operations.
+
+### Data Import Comparison
+
+| Tool | Main Purpose |
+|---|---|
+| Data Import Wizard | Simple imports |
+| Data Loader | Large-scale data operations |
+| Dataloader.io | Cloud-based imports and automation |
+| Workbench | API and advanced data operations |
+
+## PART B: DATA EXPORT METHODS
+
+### 1. Data Export Service
+
+Used to export and back up Salesforce organization data.
+
+Features:
+- Complete data backup.
+- Weekly or monthly exports.
+- Downloadable ZIP files.
+- CSV files inside the ZIP.
+
+### 2. Salesforce Reports
+
+Used to export selected information.
+
+Example:
+
+You want to export only active customer records.
+
+Steps:
+1. Create a report.
+2. Apply the required filters.
+3. Click Export.
+4. Select Excel or CSV.
+5. Download the file.
+
+### 3. Data Loader
+
+Used for large-scale data extraction.
+
+Features:
+- Export records.
+- Export large amounts of data.
+- Supports advanced operations.
+
+### 4. Dataloader.io
+
+Used for cloud-based scheduled exports.
+
+It can send exported data to supported storage destinations.
+
+### 5. Salesforce Workbench
+
+Used for technical data extraction using SOQL queries.
+
+### Import vs Export
+
+- Import = External file to Salesforce.
+- Export = Salesforce to external file.
+
+---
+
+# MODULE 8: SALESFORCE UI CUSTOMIZATION
+
+This module explains how to organize and customize the information users see.
+
+## 1. List Views
+
+A List View displays multiple records of an object in a list.
+
+Example:
+
+A Sales team wants to see all open opportunities.
+
+Instead of opening every opportunity individually, they can create a List View.
+
+### Creating a List View
+
+1. Open the required app.
+2. Select an object, such as Accounts.
+3. Click List View Controls (gear icon).
+4. Select New.
+5. Enter a List Name.
+6. Choose who can access the list.
+7. Click Save.
+
+## 2. Applying Filters to List Views
+
+Filters help display only the records you need.
+
+Example:
+
+You want to display opportunities where the Stage is Closed Won.
+
+Steps:
+
+1. Open the List View.
+2. Click the Filter icon.
+3. Check the Filter by Owner setting.
+4. Select All Records if you want to see everyone's records.
+5. Click Add Filter.
+6. Select the Field.
+7. Select the Operator.
+8. Enter the Value.
+9. Click Done.
+10. Click Save.
+
+### Common Filter Operators
+
+- Equals
+- Not Equal To
+- Greater Than
+- Less Than
+- Contains
+
+## 3. List View Charts
+
+Charts help users understand records visually.
+
+Steps:
+
+1. Open a List View.
+2. Click Display As Chart.
+3. Open Chart Settings.
+4. Click New Chart.
+5. Select Chart Type.
+6. Select Aggregate Type.
+7. Select Grouping Field.
+8. Click Save.
+
+### Chart Types
+
+- Donut Chart
+- Bar Chart
+- Column Chart
+
+### Aggregate Types
+
+- Sum
+- Average
+- Count
+
+Example:
+
+Display the total opportunity amount grouped by opportunity stage.
+
+## 4. Compact Layouts
+
+A Compact Layout displays important fields in a small area at the top of a record.
+
+Example:
+
+When opening a customer record, you may want to quickly see:
+
+- Customer Name
+- Phone
+- Email
+- Account Status
+
+### Creating a Compact Layout
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the required object.
+4. Click Compact Layouts.
+5. Click New.
+6. Enter the Layout Label.
+7. Add the required fields in the desired order.
+8. Click Save.
+9. Open Compact Layout Assignment.
+10. Click Edit Assignment.
+11. Select your new Compact Layout.
+12. Save.
+
+## 5. Lightning App Builder
+
+Lightning App Builder is used to customize Salesforce pages using drag-and-drop components.
+
+### Types of Lightning Pages
+
+- Record Page
+- App Page
+- Home Page
+
+### Creating a Lightning Record Page
+
+1. Go to Setup.
+2. Search for Lightning App Builder.
+3. Click New.
+4. Select Record Page.
+5. Click Next.
+6. Enter the Page Label.
+7. Select the Object.
+8. Choose a Page Layout Template.
+9. Click Finish.
+
+### Customizing the Page
+
+1. Select components from the left panel.
+2. Drag and drop components onto the page.
+3. Select a component to configure its properties.
+4. Rearrange or remove components.
+5. Click Save.
+
+### Assigning the Page
+
+1. Click Activation.
+2. Select App, Record Type and Profile.
+3. Choose the required app.
+4. Select Desktop or Phone.
+5. Select the Record Type.
+6. Choose the Profiles.
+7. Review the assignment.
+8. Click Save.
+
+**Remember:** Creating a Lightning Page is not enough. You must activate and assign it to make it available to the intended users.
+
+---
+
+# MODULE 9: CUSTOM BUTTONS, LINKS AND ACTIONS
+
+## 1. Custom Buttons and Links
+
+Custom Buttons and Links allow users to perform actions directly from Salesforce records.
+
+Example:
+
+A user opens a customer record and clicks a Google Search button to search for that customer.
+
+### Types of Custom Buttons and Links
+
+**1. Detail Page Link**
+
+Adds a clickable link to a record page.
+
+**2. Detail Page Button**
+
+Adds a button to a record page.
+
+**3. List Button**
+
+Adds a button to a list view.
+
+### Creating a Custom Button or Link
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the required object.
+4. Click Buttons, Links, and Actions.
+5. Click New Button or Link.
+6. Enter a Label.
+7. Select the Display Type.
+8. Configure the target behavior.
+9. Enter the URL or formula.
+10. Click Save.
+
+## 2. Custom Actions (Quick Actions)
+
+Quick Actions allow users to perform tasks quickly without navigating through multiple pages.
+
+Examples:
+- Create a Record.
+- Update a Record.
+- Log a Call.
+
+### Creating a Quick Action
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the object.
+4. Click Buttons, Links, and Actions.
+5. Click New Action.
+6. Select the Action Type.
+7. Select the Target Object if required.
+8. Enter the Label.
+9. Click Save.
+10. Configure the action layout.
+11. Add the required fields.
+12. Save.
+
+### Making Buttons and Actions Visible
+
+Creating a button does not automatically make it visible.
+
+You must add it to the page layout or Lightning page.
+
+**Using Page Layout:**
+
+1. Open Object Manager.
+2. Select the object.
+3. Open Page Layouts.
+4. Edit the active layout.
+5. Select Buttons or Mobile & Lightning Actions.
+6. Drag the required button/action into the appropriate section.
+7. Save.
+
+**Using Lightning App Builder:**
+
+1. Open the record page in Lightning App Builder.
+2. Select the Highlights Panel.
+3. Click Add Action.
+4. Select the required action.
+5. Click Done.
+6. Save.
+
+## 3. Object-Specific Action vs Global Action
+
+### Object-Specific Action
+
+An action available on a particular object.
+
+Example:
+
+An action on the Account record to create a related Contact.
+
+### Global Action
+
+An action that can be accessed from different places in Salesforce.
+
+Example:
+
+A global action to create a new Task.
+
+### Difference
+
+| Object-Specific Action | Global Action |
+|---|---|
+| Related to a specific object. | Available across Salesforce. |
+| Uses the current record's context. | Does not necessarily depend on a particular record. |
+| Configured through Object Manager. | Configured through Global Actions. |
+
+### Creating a Global Action
+
+1. Go to Setup.
+2. Search for Global Actions.
+3. Click New Action.
+4. Select Action Type.
+5. Select the Target Object.
+6. Enter a Label.
+7. Save.
+8. Configure the action layout.
+9. Open Publisher Layouts.
+10. Edit the Global Layout.
+11. Add the action to the Global Actions section.
+12. Save.
+
+---
+
+# MODULE 10: FORMULA FIELDS, ROLL-UP SUMMARY AND VALIDATION RULES
+
+These three concepts are important for Salesforce administration.
+
+## 1. Formula Fields
+
+A Formula Field automatically calculates a value using information from other fields.
+
+Example:
+
+An order contains:
+
+- Quantity = 5
+- Unit Price = ₹100
+
+Formula:
+
+Total Price = Quantity × Unit Price
+
+Result = ₹500.
+
+**Important points:**
+- Formula fields are read-only.
+- Values are calculated automatically.
+- They update when the source field values change.
+
+### Creating a Formula Field
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the required object.
+4. Click Fields & Relationships.
+5. Click New.
+6. Select Formula.
+7. Click Next.
+8. Enter the Field Label.
+9. Select Formula Return Type.
+10. Write the formula.
+11. Click Check Syntax.
+12. Configure field-level security.
+13. Save.
+
+## 2. Roll-Up Summary Fields
+
+A Roll-Up Summary Field calculates information from related child records and displays it on the parent record.
+
+Example:
+
+A customer has five orders.
+
+The parent customer record can display the total amount of all five orders.
+
+### Supported Operations
+
+| Operation | Purpose |
+|---|---|
+| COUNT | Counts child records. |
+| SUM | Adds numeric values. |
+| MIN | Finds the smallest value. |
+| MAX | Finds the largest value. |
+
+**Important:** Roll-Up Summary fields are created on the parent side of a Master-Detail relationship.
+
+### Creating a Roll-Up Summary Field
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the Parent Object.
+4. Click Fields & Relationships.
+5. Click New.
+6. Select Roll-Up Summary.
+7. Enter the Field Label.
+8. Select the Child Object.
+9. Select Roll-Up Type.
+10. Select the field to calculate, if required.
+11. Configure Filter Criteria.
+12. Save.
+
+## 3. Validation Rules
+
+Validation Rules ensure that users enter correct information before saving a record.
+
+Example:
+
+A company does not allow discounts greater than 100%.
+
+If a user enters 120%, Salesforce blocks the save and displays an error message.
+
+### How Validation Rules Work
+
+1. User enters information.
+2. Salesforce checks the validation formula.
+3. If the formula evaluates to TRUE, the record is blocked.
+4. Salesforce displays an error message.
+
+**Important:** A validation rule's error condition formula should evaluate to TRUE when the entered data is invalid.
+
+### Creating a Validation Rule
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the required object.
+4. Click Validation Rules.
+5. Click New.
+6. Enter Rule Name.
+7. Enable Active.
+8. Enter the Error Condition Formula.
+9. Click Check Syntax.
+10. Enter an Error Message.
+11. Select the error location.
+12. Save.
+
+### Example Formula
+
+```text
+Discount_Percentage__c > 100
+```
+
+Error Message:
+
+```text
+Discount percentage cannot exceed 100%.
+```
+
+### Difference Between the Three
+
+| Feature | Purpose |
+|---|---|
+| Formula Field | Calculates values. |
+| Roll-Up Summary | Summarizes child records. |
+| Validation Rule | Prevents incorrect data. |
+
+---
+
+# MODULE 11: REPORTS, FILTERS AND DASHBOARDS
+
+## PART A: REPORTS
+
+### 1. What is a Report?
+
+A Report is a tool used to display, organize and analyze Salesforce data.
+
+Reports help businesses understand their performance.
+
+Example:
+
+A Sales Manager wants to know:
+- How many opportunities are open?
+- How many deals are closed?
+- Which salesperson generated the highest revenue?
+
+Reports help answer these questions.
+
+### 2. Creating a Report
+
+1. Open the App Launcher.
+2. Search for Reports.
+3. Open Reports.
+4. Click New Report.
+5. Select the Report Type.
+6. Click Start Report.
+7. Add the required fields.
+8. Apply filters.
+9. Group the records if required.
+10. Click Save.
+11. Enter Report Name and Description.
+12. Click Run.
+
+### Important Report Builder Sections
+
+**Outline Tab**
+
+Used to select fields and group records.
+
+**Filters Tab**
+
+Used to filter records.
+
+**Fields Panel**
+
+Used to search and add fields to the report.
+
+## PART B: REPORT FILTERS
+
+Filters help display only the records that match specific conditions.
+
+There are five main filter types.
+
+### 1. Standard Filter
+
+Predefined filters available in the report.
+
+Example:
+- My Accounts
+- All Accounts
+- Created Date
+
+### 2. Field Filter
+
+Used to filter records based on a particular field.
+
+Example:
+
+Display Accounts where Type = Customer.
+
+### 3. Filter Logic
+
+Combines multiple filters using logical operators.
+
+Operators:
+- AND
+- OR
+- NOT
+
+Example:
+
+```text
+(1 OR 2) AND NOT 3
+```
+
+Meaning:
+- Filter 1 or Filter 2 must match.
+- Filter 3 must not match.
+
+### 4. Cross Filter
+
+Used to filter a parent object based on the existence or absence of related child records.
+
+Example:
+
+Show Accounts with Opportunities.
+
+Another example:
+
+Show Accounts without Opportunities.
+
+### 5. Row Limit
+
+Restricts the maximum number of rows displayed in a report.
+
+### Creating a Field Filter
+
+1. Open the Report Builder.
+2. Click Filters.
+3. Click Add Filter.
+4. Select the required field.
+5. Select the operator.
+6. Enter the value.
+7. Click Apply.
+8. Click Save & Run.
+
+### Creating a Cross Filter
+
+1. Open the Report Builder.
+2. Click Filters.
+3. Open More Actions.
+4. Select Add Cross Filter.
+5. Select the Parent Object.
+6. Choose With or Without.
+7. Select the Child Object.
+8. Add subfilters if required.
+9. Apply and Save.
+
+### Creating Filter Logic
+
+1. Add multiple field filters.
+2. Open More Actions.
+3. Select Add Filter Logic.
+4. Enter the required condition.
+5. Click Apply.
+6. Save the report.
+
+### Locked Filters
+
+A Locked Filter prevents users from changing a particular filter value from the report run page.
+
+## PART C: REPORT FORMATS
+
+Salesforce has three main report formats.
+
+### 1. Tabular Report
+
+Displays information in simple rows and columns.
+
+Example:
+
+A list of all customers and their phone numbers.
+
+Best for:
+- Simple lists.
+- Contact lists.
+- Basic data exports.
+
+### 2. Summary Report
+
+Groups records based on a selected field.
+
+It can display subtotals and charts.
+
+Example:
+
+Sales revenue grouped by salesperson.
+
+Best for:
+- Grouping information.
+- Comparing totals.
+- Tracking performance.
+
+### 3. Matrix Report
+
+Groups records using both rows and columns.
+
+Example:
+
+Monthly revenue grouped by product type and month.
+
+Best for:
+- Comparing multiple categories.
+- Analyzing trends.
+- High-level business summaries.
+
+### Difference Between Report Formats
+
+| Format | Description |
+|---|---|
+| Tabular | Simple rows and columns. |
+| Summary | Groups rows. |
+| Matrix | Groups rows and columns. |
+
+## PART D: DASHBOARDS
+
+### 1. What is a Dashboard?
+
+A Dashboard is a visual representation of Salesforce reports.
+
+It displays important business information using charts, tables, metrics and gauges.
+
+### Simple Example
+
+A Sales Dashboard can display:
+
+- Total Revenue
+- Number of Leads
+- Closed Opportunities
+- Monthly Sales
+- Sales Performance
+
+### Report vs Dashboard
+
+| Report | Dashboard |
+|---|---|
+| Displays data in rows and columns. | Displays data visually. |
+| Used for detailed analysis. | Used for quick decision-making. |
+| Contains records and fields. | Contains dashboard components. |
+
+### Dashboard Components
+
+**1. Charts**
+
+Display data graphically.
+
+Examples:
+- Bar Chart
+- Line Chart
+- Donut Chart
+- Funnel Chart
+
+**2. Gauge**
+
+Displays a value against a defined range.
+
+**3. Metric**
+
+Displays a single important value.
+
+Example: Total Revenue.
+
+**4. Table**
+
+Displays information in rows and columns.
+
+## Creating a Dashboard
+
+### Step 1: Create a Source Report
+
+1. Open Reports.
+2. Click New Report.
+3. Select Leads as the Report Type.
+4. Click Start Report.
+5. Apply filters.
+6. Add the required fields.
+7. Group records by Lead Source.
+8. Save the report.
+
+Example Report Name: Leads by Lead Source.
+
+### Step 2: Create the Dashboard
+
+1. Open the Dashboards tab.
+2. Click New Dashboard.
+3. Enter Dashboard Name.
+4. Click Create.
+5. Click Add Widget.
+6. Select Chart or Table.
+7. Select your source report.
+8. Choose a chart type.
+9. Click Add.
+10. Arrange the dashboard components.
+11. Click Save and Done.
+
+## Dynamic Dashboards
+
+A Dynamic Dashboard displays data based on the viewing user's access permissions.
+
+Example:
+
+A Sales Manager sees the records they are allowed to access.
+
+A Sales Representative sees their permitted records.
+
+### Creating a Dynamic Dashboard
+
+1. Open the Dashboard.
+2. Click the Properties (Gear) icon.
+3. Find View Dashboard As.
+4. Select The dashboard viewer.
+5. Configure viewer options if required.
+6. Save.
+
+---
+
+# MODULE 12: SALESFORCE DATA SECURITY
+
+## 1. What is Data Security?
+
+Data Security means protecting business information by controlling who can access, view, edit or delete data.
+
+### Real-Life Example
+
+Imagine a company with three departments:
+
+**HR Department**
+- Can access employee information.
+- Can view salary details.
+
+**Sales Department**
+- Can access customer information.
+- Can manage sales records.
+
+**Managers**
+- Can view their team's records.
+
+Not every employee should have access to all company information.
+
+Salesforce provides different security levels to control access.
+
+## 2. Four Main Levels of Security
+
+1. Organization-Level Security.
+2. Object-Level Security.
+3. Field-Level Security.
+4. Record-Level Security.
+
+### 1. Organization-Level Security
+
+Controls who can log in to Salesforce and from where they can access it.
+
+Example:
+
+A company allows employees to access Salesforce only during working hours.
+
+### How to Configure
+
+1. Go to Setup.
+2. Search for Session Settings.
+3. Configure session security.
+4. Search for Network Access.
+5. Configure trusted IP ranges.
+6. Open Profiles.
+7. Configure Login Hours and Login IP Ranges where required.
+
+### 2. Object-Level Security
+
+Controls which objects a user can access and what actions they can perform.
+
+Example:
+
+A Sales user can access Accounts and Contacts but may not have permission to access an HR object.
+
+### Four Main Object Permissions
+
+| Permission | Meaning |
+|---|---|
+| Read | View records. |
+| Create | Create new records. |
+| Edit | Modify existing records. |
+| Delete | Delete records. |
+
+### How to Configure
+
+1. Go to Setup.
+2. Search for Profiles or Permission Sets.
+3. Open the required Profile or Permission Set.
+4. Find Object Settings.
+5. Select the required object.
+6. Enable the necessary permissions.
+7. Save.
+
+### 3. Field-Level Security (FLS)
+
+Controls which fields users can view or edit.
+
+Example:
+
+Consider an Employee object.
+
+- HR can view Salary.
+- Managers can view Employee Name and Department.
+- Regular employees cannot view Salary.
+
+### How to Configure
+
+1. Go to Setup.
+2. Open Object Manager.
+3. Select the required object.
+4. Click Fields & Relationships.
+5. Select the required field.
+6. Click Set Field-Level Security.
+7. Configure visibility and edit access.
+8. Save.
+
+### 4. Record-Level Security
+
+Controls which individual records users can access.
+
+Example:
+
+- Rahul can see his assigned customers.
+- Priya can see her assigned customers.
+- A Manager can access records belonging to their team, depending on sharing settings.
+
+## 3. Record-Level Security Methods
+
+Salesforce provides several ways to manage record access.
+
+### 1. Organization-Wide Defaults (OWD)
+
+OWD defines the default level of access users have to records they do not own.
+
+It establishes the baseline record-sharing access.
+
+### 2. Role Hierarchy
+
+Role Hierarchy defines the reporting structure in an organization.
+
+Example:
+
+Sales Director
+↓
+Sales Manager
+↓
+Sales Representatives
+
+Managers generally gain access to records owned by users below them, depending on the sharing configuration.
+
+### 3. Sharing Rules
+
+Sharing Rules provide additional record access to users or groups.
+
+Example:
+
+Team A manages Indian customers.
+
+Team B manages US customers.
+
+If Team A needs access to certain records owned by Team B, Sharing Rules can provide that access.
+
+**Important:** Sharing Rules extend access. They do not restrict existing access.
+
+Two main types:
+
+- Owner-Based Sharing Rules.
+- Criteria-Based Sharing Rules.
+
+### Creating Sharing Rules
+
+1. Go to Setup.
+2. Search for Sharing Settings.
+3. Select the required object.
+4. Find Sharing Rules.
+5. Click New.
+6. Select Owner-Based or Criteria-Based.
+7. Choose the users or groups.
+8. Select access level:
+   - Read Only
+   - Read/Write
+9. Save.
+
+### 4. Manual Sharing
+
+Allows users to share individual records manually with other users, where supported.
+
+### 5. Teams
+
+Allows records to be shared with specific team members using supported team features.
+
+## 4. Role Hierarchy
+
+Role Hierarchy represents the organizational reporting structure.
+
+Example:
+
+```text
+             Sales Director
+                   |
+              Sales Manager
+                   |
+          -------------------
+          |                 |
+       Sales Rep 1       Sales Rep 2
+```
+
+### Creating a Role Hierarchy
+
+1. Go to Setup.
+2. Search for Roles.
+3. Click Set Up Roles.
+4. Click Add Role.
+5. Enter the Role Name.
+6. Select the role above it.
+7. Click Save.
+
+## 5. Important Security Differences
+
+| Security Type | Controls |
+|---|---|
+| Org-Level | Who can log in? |
+| Object-Level | Which objects can users access? |
+| Field-Level | Which fields can users view or edit? |
+| Record-Level | Which individual records can users access? |
+| Role Hierarchy | How does access flow through management levels? |
+| Sharing Rules | How can additional records be shared? |
+
+### Easy Way to Remember
+
+- Organization = Entry into Salesforce.
+- Object = Access to a table.
+- Field = Access to a column.
+- Record = Access to a row.
+- Role Hierarchy = Manager-to-employee access.
+- Sharing Rules = Additional record access.
+
+---
+
+# MODULE 13: USER ENGAGEMENT AND IN-APP GUIDANCE
+
+## 1. What is User Engagement?
+
+User Engagement means helping users understand and use Salesforce effectively.
+
+Salesforce provides different ways to guide users inside the application.
+
+There are four main scenarios.
+
+### 1. Onboarding
+
+Helps new users understand where to start.
+
+Examples:
+- First-time login.
+- Setting up a new feature.
+- Introducing a new release.
+
+### 2. Feature Discovery and Adoption
+
+Helps users discover and use new features.
+
+Examples:
+- Introducing a newly enabled feature.
+- Encouraging best practices.
+- Explaining new functionality.
+
+### 3. Troubleshooting Help
+
+Provides assistance when users face problems.
+
+Examples:
+- Showing helpful instructions.
+- Providing support resources.
+- Displaying guidance at the right time.
+
+### 4. Deeper Learning
+
+Helps users understand advanced features.
+
+Example:
+
+A user wants to understand a new Salesforce feature in more detail.
+
+## 2. User Engagement Components and Patterns
+
+### 1. Welcome Mat
+
+A welcome experience shown when users first log in to Lightning Experience.
+
+Purpose:
+- Introduce Salesforce.
+- Show getting-started resources.
+- Help users understand new features.
+
+### 2. Guidance Center
+
+Provides contextual help, Trailhead modules and other learning resources.
+
+Users can access it through the Trailhead icon in the header.
+
+### 3. Prompts
+
+Small messages displayed to inform users about:
+
+- New features.
+- Important announcements.
+- Helpful guidance.
+- Best practices.
+
+### 4. Popovers
+
+A small information window that points users towards a particular component on the page.
+
+Purpose:
+
+To explain a feature or provide tips.
+
+### 5. Empty State
+
+Displays helpful instructions when a section has no data.
+
+Example:
+
+Instead of showing a blank page, Salesforce can display instructions explaining how to create the first record.
+
+### 6. Field-Level Help
+
+Provides information about the purpose of a particular field.
+
+Example:
+
+A small help icon next to an Annual Revenue field explains what value should be entered.
+
+### 7. Setup Assistant
+
+Provides a centralized list of setup tasks.
+
+### 8. Walkthrough
+
+An interactive step-by-step guide that helps users complete a process.
+
+Example:
+
+Guiding a new employee through creating an Account.
+
+## 3. Push Method vs Pull Method
+
+### Push Method
+
+The system automatically displays help to the user.
+
+The user does not need to request it.
+
+Example:
+- Welcome message.
+- New feature announcement.
+- Automatic prompt.
+
+### Pull Method
+
+The user actively requests help when needed.
+
+Example:
+- Clicking a help icon.
+- Opening a help menu.
+- Hovering over an information icon.
+
+### Difference
+
+| Push | Pull |
+|---|---|
+| System provides help automatically. | User requests help. |
+| Proactive approach. | User-initiated approach. |
+| Example: Welcome prompt. | Example: Help icon. |
+
+## 4. Prompt vs Walkthrough
+
+### Prompt
+
+A small message that provides information or highlights a feature.
+
+Example:
+
+A message explaining a new button.
+
+### Walkthrough
+
+A series of connected prompts that guide users through multiple steps.
+
+Example:
+
+A step-by-step guide for creating a new customer record.
+
+| Prompt | Walkthrough |
+|---|---|
+| Single message. | Multiple connected messages. |
+| Quick information. | Step-by-step guidance. |
+| Simple feature explanation. | Guided process. |
+
+## 5. Three Types of Prompts
+
+### 1. Floating Prompt
+
+A small message displayed at a selected position on a page.
+
+Features:
+- Short message.
+- Optional image.
+- Optional CTA button.
+- Can be placed in different positions.
+
+### 2. Targeted Prompt
+
+A prompt attached directly to a particular page element.
+
+Example:
+
+A message pointing towards the Save button.
+
+### 3. Docked Prompt
+
+A prompt that remains available while users navigate.
+
+Best for:
+- Longer instructions.
+- Rich text.
+- Lists.
+- Embedded videos.
+
+## 6. Creating Prompts
+
+### Step 1: Setup
+
+1. Install the required packages in the Trailhead Playground if needed.
+2. Open Setup.
+3. Search for In-App Guidance.
+4. View installed prompts.
+
+### Step 2: Create a Targeted Prompt
+
+1. Open In-App Guidance.
+2. Click Add.
+3. Navigate to the required application.
+4. Select the target location.
+5. Choose Targeted Prompt.
+6. Select the element to highlight.
+7. Enter Title and Body.
+8. Configure buttons.
+9. Set schedule and display frequency.
+10. Enter a unique Name and API Name.
+11. Save and click Done.
+
+### Step 3: Trusted URLs for Images
+
+If a prompt uses an external image:
+
+1. Open Setup.
+2. Search for Trusted URLs.
+3. Add the external image domain.
+4. Enable the required CSP directive (img-src).
+5. Save.
+
+## 7. Tracking User Engagement
+
+Salesforce provides metrics to understand whether users interact with prompts and walkthroughs.
+
+### Important Metrics
+
+**Views**
+
+The number of unique users who viewed a prompt or walkthrough.
+
+**Completes**
+
+The percentage of viewers who clicked the action button or completed the final step.
+
+### Reports
+
+Engagement information can be analyzed using the Prompt Actions object or available reporting packages.
+
+Purpose:
+- Understand user engagement.
+- Identify drop-offs.
+- Improve guidance.
+- Measure feature adoption.
+
+---
+
+# FINAL REVISION – IMPORTANT SALESFORCE TERMINOLOGY
+
+| Term | Meaning |
+|---|---|
+| CRM | Customer Relationship Management |
+| Org | Salesforce Organization |
+| Object | Database Table |
+| Field | Database Column |
+| Record | Database Row |
+| App | Collection of objects, tabs and features |
+| Tab | Navigation item used to access an object |
+| Setup | Area used to configure Salesforce |
+| Object Manager | Used to manage objects and fields |
+| App Manager | Used to create and manage applications |
+| Lightning App Builder | Used to customize Lightning pages |
+| Data Import Wizard | Simple data import tool |
+| Data Loader | Desktop tool for large data operations |
+| Workbench | Tool for interacting with Salesforce APIs |
+| Lookup | Independent object relationship |
+| Master-Detail | Parent-child relationship |
+| Formula Field | Automatically calculated field |
+| Roll-Up Summary | Summarizes child records |
+| Validation Rule | Prevents invalid data |
+| List View | Displays a filtered list of records |
+| Compact Layout | Displays important record information |
+| Quick Action | Allows users to perform tasks quickly |
+| Report | Displays and analyzes data |
+| Dashboard | Visual representation of reports |
+| OWD | Organization-Wide Defaults |
+| FLS | Field-Level Security |
+| Sharing Rules | Provide additional record access |
+| Role Hierarchy | Organizational access structure |
+| Prompt | Small guidance message |
+| Walkthrough | Step-by-step interactive guide |
+
+---
+
+# SUGGESTED PRACTICAL LEARNING ORDER
+
+Complete these exercises in your Salesforce Developer Org or Trailhead Playground.
+
+1. Create a custom Student object.
+2. Create Name, Age, Email and Phone fields.
+3. Create a custom tab for the Student object.
+4. Create five Student records.
+5. Create a College object.
+6. Establish a Lookup Relationship between Student and College.
+7. Create another object and practice a Master-Detail Relationship.
+8. Import sample records using Data Import Wizard.
+9. Create a List View and apply filters.
+10. Create a Compact Layout.
+11. Customize a Record Page using Lightning App Builder.
+12. Create a Quick Action.
+13. Create a Formula Field.
+14. Create a Roll-Up Summary Field.
+15. Create a Validation Rule.
+16. Create a Report.
+17. Practice Tabular, Summary and Matrix Reports.
+18. Create a Dashboard using your report.
+19. Configure Profiles and Permission Sets.
+20. Practice OWD, Role Hierarchy and Sharing Rules.
+21. Explore In-App Guidance and create a Prompt.
+
+**Final Learning Tip:** Do not just memorize the definitions. Create the objects, fields, records and relationships yourself. Salesforce is much easier to understand when you practice each concept in a Playground.
