@@ -503,5 +503,79 @@ Reports: Use the Prompt Actions object or prebuilt Salesforce Labs packages to a
 
 
 
+What is a Report in Salesforce?
+A report in Salesforce is a flexible tool used to display, organize, and analyze Salesforce data in rows and columns. It allows users to filter data, group records, and present business information in a clear format to track performance and gain insights.
+
+How to Create a Report in Salesforce
+Access Reports: Open your Trailhead Playground, go to the App Launcher, find and select Reports, then click New Report (or go to the Analytics tab and select Create > Report under the Lightning section).
+
+Select Report Type: Choose the desired report type (e.g., Accounts), which determines the records and fields visible in your report, and click Start Report.
+
+Configure Settings:
+
+Use the Outline tab to group data.
+
+Use the Filters tab to apply filters (click All Time if no data appears initially).
+
+Use the Fields panel to search or drag and drop fields into your report.
+
+Save and Run: Click Save, name your report (e.g., Direct Customer Accounts), enter a description, save it, and then click Run to view the executed report.
+
+
+FILTERS 
+
+Filtering reports in Salesforce allows you to narrow down your data and focus on specific records. There are five main types of report filters available in the report builder:
+
+Standard Filter: Pre-built filters included with most objects (such as Show Me for record ownership and date ranges like Created Date).
+
+Field Filter: Custom criteria set on specific fields using an operator and a value (e.g., Type equals Customer - Direct).
+
+Filter Logic: Boolean conditions (AND, OR, NOT) used to combine and control how multiple field filters are evaluated.
+
+Cross Filter: Extends reports to related child objects using with or without conditions (e.g., Accounts with Opportunities).
+
+Row Limit: Restricts the maximum number of rows displayed (primarily used for tabular reports serving as dashboard components).
+
+How to Create and Configure Filters
+1. Adding a Standard & Field Filter
+Open your report in the report builder and click the Filters tab on the left panel.
+
+Click an existing standard filter (like Show Me) to adjust groupings (e.g., change to My accounts).
+
+Click Add filter, choose a field (e.g., Type), select an operator (e.g., equals), enter your value (e.g., Customer - Direct), and click Apply.
+
+Click Save & Run.
+
+2. Setting Up Cross Filters
+Cross filters let you filter primary objects based on related child objects without writing code:
+
+In the Filters tab, click the More Actions arrow and select Add Cross Filter.
+
+Select the parent object (e.g., Accounts) from the Show Me dropdown, choose with, and pick the secondary object (e.g., Opportunities). Click Apply.
+
+Optionally add subfilters by searching for a child field (e.g., Stage equals Prospecting), then click Apply and Save.
+
+3. Applying Filter Logic
+To combine multiple field filters using custom conditions:
+
+Ensure you have added at least one field filter.
+
+Click the More Actions arrow in the Filters pane and select Add Filter Logic.
+
+Enter your custom Boolean expression using numbers, operators (AND, OR, NOT), and parentheses (for example: (1 OR 2) AND NOT 3).
+
+Click Apply and save your report.
+
+4. Locking Filters on the Report Run Page
+If you want to prevent users from modifying a filter value on the report run page:
+
+Select or create your field filter (e.g., Lead Source contains Partner).
+
+Check the Locked checkbox in the filter configuration window and click Apply.
+
+Save the report to enforce the locked filter for all viewers.
+
+
+
 
 
