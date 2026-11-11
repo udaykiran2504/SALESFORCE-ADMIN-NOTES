@@ -10,6 +10,7 @@ types of crm
 
 role of an administrator 
 
+
 user support
 user management ( access control, managing the user in the org, permissions, license )
 data management 
