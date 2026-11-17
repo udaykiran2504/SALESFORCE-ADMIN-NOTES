@@ -1883,7 +1883,58 @@ Purpose:
 - Improve guidance.
 - Measure feature adoption.
 
----
+relationships in salesforce 
+
+1.object level (schema level)
+2.record level ( data level )
+
+object level :
+ 
+lookup relation 
+an lookup relation in salesforce is a loosely typed relation 
+the parent and child can exist separately with out dependent on each other 
+we an have 40 lookup relation per object 
+
+master detailed relation 
+a master detailed relation in a sales force is a tight relation 
+in this relation an child is dependent on the parent and it an inherit functionalities and features of the parent 
+if parent record is deleted then child is automatically deleted   
+  
+Many to many relations :
+we use a junction object with two master details relations to connect 2 different objects with many to many relation
+
+external look up :
+
+we use this relation to connect the objects with the objects that are outside the salesforce that means  like sql databases 
+
+records level relations
+
+1.hierarchial relation : 
+
+A hierarchical relationship is essentially a specialized self-relationship built exclusively for the User object to map reporting structures.
+
+2. self relation:
+
+A self-relationship allows a record on an object to relate to another record on that same object 
+
+what is matching rules and duplicate rules :
+
+matching rule are those rules that helps us to find the duplicate values in an object or in the whole database 
+
+duplicate rules are those rules that decide what to do after we find a duplicate value in the data base 
+while creating an object or editing an object we can allow or block to save , and also we can raise an alarm before saving 
+
+what are email templates and email alerts ( work flows ) 
+
+an email templates are those we use to send the emails dynamically without any manual process using flows 
+how to create a email template 
+setup> quick box > classic email template > select text/html etc , > name > body with fields > save 
+
+how to create a work flow for email 
+
+setup > quick box> email alerts > select name > object > select email temp> select field> select from address > save 
+
+go to object > record page > email option( right side ) insert email template > send
 
 # FINAL REVISION – IMPORTANT SALESFORCE TERMINOLOGY
 
@@ -1919,8 +1970,6 @@ Purpose:
 | Role Hierarchy | Organizational access structure |
 | Prompt | Small guidance message |
 | Walkthrough | Step-by-step interactive guide |
-
----
 
 # SUGGESTED PRACTICAL LEARNING ORDER
 
