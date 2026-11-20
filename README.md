@@ -1064,6 +1064,30 @@ setup > quick box> email alerts > select name > object > select email temp> sele
 
 go to object > record page > email option( right side ) insert email template > send
 
+Record type in salesforce 
+
+a record type in sales force allow you to group records if the same objects and allow you to present different page layout , pick list values , business process to different users 
+
+object manager> object > record type > new> name > select layout > picklist values > save 
+
+salesforce security model 
+
+1.object level
+a. profiles
+b. permission sets 
+
+2.record level security 
+a. OWD / sharing settings ( private , read only , public read/write )
+b. role hierarchy
+c. sharing rules ( owner based / criteria based)
+d. manual sharing (
+
+note :
+1.for our own records just check permission on the profile / permission sets , not the record level security 
+
+2. for other records, first check the rec level and then tally those permission to the permission to profile/permission sets 
+
+3. when a person is above you in role hierarchy , and the grant using hierarchy is checked for that object , the one above one can access and do all the things to your record like he can do to his own records 
 
 
 
